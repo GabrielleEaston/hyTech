@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Home from './components/Home'
+// import Home from './components/Home'
 import Products from './components/Products'
 import ProductCreate from './components/ProductCreate'
 import ProductEdit from './components/ProductEdit'
@@ -36,7 +36,8 @@ class App extends Component {
     return (
       <div className="app">
         <Switch>
-          <Route exact path="/" render={() => <Home user={user} />} />
+        {/* <Route exact path="/products" render={() => <Products user={user} />} /> */}
+          <Route exact path="/" render={() => <Products user={user} />} />
           <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />

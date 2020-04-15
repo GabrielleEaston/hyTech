@@ -4,7 +4,7 @@ nav {
     flex: 1;
     position: fixed;
     width: 100%;
-    background-color: white;
+    background-color: #000033;
     z-index: 1;
     top: 0;
     left: 0;
@@ -29,6 +29,7 @@ nav {
     flex: 1;
     max-width: 30vw;
     transition: 250ms all;
+    color: white;
 }
 
 .logo:hover {
@@ -41,10 +42,15 @@ nav {
     align-items: center;
     font-size: 18px;
     display: flex;
+    margin-left: 210px;
+   
+   
 }
 
 .link {
     flex: 1;
+    color: white;
+
 }
 
 .welcome {

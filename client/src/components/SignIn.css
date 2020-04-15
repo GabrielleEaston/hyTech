@@ -19,7 +19,7 @@ button {
 }
 
 .navbar {
-  background: #0097a7;
+  background: #000033;
   height: 4em;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -106,7 +106,8 @@ button {
 .form-container form button {
   width: 50%;
   margin: 1em auto;
-  background: #56c8d8;
+  background: #000033;
+  color: white;
   border: none;
 }
 
@@ -232,12 +233,12 @@ button {
 }
 
 .item-container .item button {
-  background: #0097a7;
+  background: #000033;
   color: #f8f8f8;
 }
 
 .item-container .item button:hover {
-  background: #56c8d8;
+  background: #000033;
   color: #333;
 }
 
