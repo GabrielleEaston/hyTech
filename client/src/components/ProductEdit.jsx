@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './ProductEdit.css'
 import { Redirect } from 'react-router-dom'
 import Layout from './shared/Layout'
-import { getProduct, updateProduct } from '../services/product'
+import { getProduct, updateProduct, deleteProduct } from '../services/product'
 
 class ProductEdit extends Component {
     constructor(props) {
@@ -77,11 +77,12 @@ class ProductEdit extends Component {
                             onChange={this.handleChange}
                         />
                         <input
-                            className="input-price"
-                            placeholder='Price'
-                            value={product.price}
-                            name='price'
+                            className="input-name"
+                            placeholder='Sub title'
+                            value={product.sub_title}
+                            name='sub_title'
                             required
+                            autoFocus
                             onChange={this.handleChange}
                         />
                         <textarea
@@ -94,7 +95,8 @@ class ProductEdit extends Component {
                             required
                             onChange={this.handleChange}
                         />
-                        <button type='submit' className="save-button">Save</button>
+                <button type='submit' className="save-button">Save</button>
+                <button className="delete-button" onClick={() => deleteProduct(product._id)}>Delete</button>
                     </form>
                 </div>
             </Layout>
