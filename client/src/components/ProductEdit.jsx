@@ -14,7 +14,8 @@ class ProductEdit extends Component {
                 imgURL: '',
                 sub_title: ''
             },
-            updated: false
+          updated: false,
+          deleted: false
         }
     }
 
@@ -41,14 +42,25 @@ class ProductEdit extends Component {
         const updated = await updateProduct(id, this.state.product)
         this.setState({ updated })
     }
+    handleDelete = async (event) => {
+      event.preventDefault()
+      let { id } = this.props.match.params
+      const deleted = await deleteProduct(id, this.state.product)
+      this.setState({ deleted })
+  }
 
     render() {
 
-        const { product, updated } = this.state
+        const { product, updated, deleted } = this.state
 
         if (updated) {
             return <Redirect to={`/products/${this.props.match.params.id}`} />
         }
+      
+       else if (deleted) {
+          return <Redirect to={`/products`} />
+      }
+        
 
         return (
             <Layout user={this.props.user}>
@@ -96,7 +108,7 @@ class ProductEdit extends Component {
                             onChange={this.handleChange}
                         />
                 <button type='submit' className="save-button">Save</button>
-                <button className="delete-button" onClick={() => deleteProduct(product._id)}>Delete</button>
+                <button className="delete-button" onClick={(this.handleDelete)}>Delete</button>
                     </form>
                 </div>
             </Layout>
