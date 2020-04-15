@@ -12,7 +12,7 @@ class ProductEdit extends Component {
                 name: '',
                 description: '',
                 imgURL: '',
-                price: ''
+                sub_title: ''
             },
             updated: false
         }

@@ -67,7 +67,7 @@ class Products extends Component {
   render() {
     const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
     const PRODUCTS = products.map((product, index) =>
-      <Product _id={product._id} name={product.name} imgURL={product.imgURL} price={product.price} key={index} />
+      <Product _id={product._id} name={product.name} imgURL={product.imgURL} description={product.description} key={index} />
     )
 
     return (
