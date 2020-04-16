@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
 .product-detail {
     /* display: flex; */
     padding: 100px;
@@ -14,17 +16,24 @@
     font-size: 60px;
     padding: 5px;
     color: #000033;
-    margin-top: 120px;
+
+    font-family: 'Share Tech', sans-serif;
+
 }
 
 .sub-title {
   font-size: 34px;
   padding: 5px;
   color: #000033;
+
+   margin-bottom: 50px;
+   font-family: 'Share Tech', sans-serif;
+
    margin-bottom: 20px;
 }
 .author {
   margin-bottom: 5px;
+
 }
 
 
@@ -32,6 +41,7 @@
     padding: 10px;
     letter-spacing: .9px;
     margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .product-detail-image {
