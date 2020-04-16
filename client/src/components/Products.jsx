@@ -7,6 +7,7 @@ import Layout from './shared/Layout'
 import { getProducts } from '../services/product'
 import sideBar from './sideBar'
 
+
 class Products extends Component {
   constructor() {
     super()
@@ -72,35 +73,36 @@ class Products extends Component {
     )
 
     return (
-      
+
       <Layout user={this.props.user}>
         <div className="rows">
           <div className="side">
             <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
             <form className="sort-container" onSubmit={this.handleSubmit}>
-            <label htmlFor="sort">SORT BY:</label>
-            
-          <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
-            <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
-            <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
-            <option value="price-ascending">&nbsp; Price, low to high &nbsp;</option>
-            <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
-          </select>
+              <label htmlFor="sort">SORT BY:</label>
+
+              <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
+                <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
+                <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
+                <option value="price-ascending">&nbsp; Price, low to high &nbsp;</option>
+                <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
+              </select>
             </form>
-            <sideBar/>
+            <sideBar />
           </div>
           <div className="main">
-        
-          
+
+
             <div className="products">
-              
-          {PRODUCTS}
+
+              {PRODUCTS}
             </div>
           </div>
-        
-     </div>
-        </Layout>
-        
+
+        </div>
+      </Layout>
+
+
     )
   }
 }
