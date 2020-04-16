@@ -18,7 +18,7 @@
         flex-direction: column;
     }
     .layout-children {
-        width: 80vw;
+        /* width: 80vw; */
         /* flex: 4; */
         padding: 0px;
         margin: 0px;
