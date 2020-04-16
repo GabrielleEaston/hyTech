@@ -1,18 +1,21 @@
 .search-form {
-    padding-top: 100px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 20vw;
+    position: relative;
 }
 
 .search-input {
-    width: 70vw;
+    width: 20vw;
     font-size: 18px;
     letter-spacing: 0.1px;
     padding: 12px 20px 12px 40px;
     border: 1px solid #ddd;
-    margin: 40px;
+    margin: 10px;
+    
 }
 
 .search-input::placeholder {
