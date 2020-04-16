@@ -28,6 +28,7 @@ class ProductDetail extends Component {
     const { product } = this.state
     return (
       <Layout user={this.props.user}>
+        
         <div className="product-detail">
           <div className="detail">
             <div className="title">{product.name}</div>
