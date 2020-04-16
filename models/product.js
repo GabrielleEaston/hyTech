@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const Product = new Schema(
   {
+    author: { type: String, required: true },
     name: { type: String, required: true },
     imgURL: { type: String, required: true },
     description: { type: String, required: true },

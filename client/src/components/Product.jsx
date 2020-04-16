@@ -3,9 +3,7 @@ import './Product.css';
 import { Link } from 'react-router-dom'
 
 const Product = (props) => {
-  const convertDate = () => {
-    const date = props.createdAt
-  }
+  
     
     return (
       <>
