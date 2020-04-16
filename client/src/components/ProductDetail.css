@@ -13,7 +13,9 @@
 .title {
     font-size: 60px;
     padding: 5px;
-    color: #000033
+    color: #000033;
+    margin-top: 100px;
+    margin-left: 200px;
 }
 
 .sub-title {
@@ -21,6 +23,7 @@
   padding: 5px;
   color: #000033;
    margin-bottom: 50px;
+   margin-left: 200px;
 }
 
 
@@ -28,10 +31,15 @@
     padding: 10px;
     letter-spacing: .9px;
     margin-top: 50px;
+    width: 70%;
+    align-self: center;
+    text-align: justify;
 }
 
 .product-detail-image {
-    width: 90%;
+    width: 70%;
+    align-self: center;
+    height: 40%;
     
     /* padding: 40px 40px; */
 }
