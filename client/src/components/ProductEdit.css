@@ -3,7 +3,7 @@
 .product-edit {
     display: flex;
     padding: 100px;
-    padding-top: 80px;
+    padding-top: 20%;
 }
 
 .image-container {
@@ -13,9 +13,12 @@
 }
 
 .edit-product-image {
-    width: 500px;
+    /* width: 500px; */
     padding: 0 40px;
     padding-bottom: 5px;
+    max-width: 100%;
+    object-fit: contain;
+
 }
 
 .edit-input-image-link {
@@ -45,7 +48,7 @@
     line-height: 1.6;
 }
 
-.save-button {
+.save-button, .delete-button  {
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     height: 40px;
