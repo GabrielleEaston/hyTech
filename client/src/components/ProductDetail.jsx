@@ -12,6 +12,7 @@ class ProductDetail extends Component {
         name: '',
         description: '',
         imgURL: '',
+        author: '',
         sub_title: ''
       }
     }
@@ -31,6 +32,7 @@ class ProductDetail extends Component {
           <div className="detail">
             <div className="title">{product.name}</div>
             <div className="sub-title">{product.sub_title}</div>
+            <div className="author">{product.author}</div>
           <img className="product-detail-image" src={product.imgURL} alt={product.name} />
             <div className="description">{product.description}</div>
             <div className="button-container">
