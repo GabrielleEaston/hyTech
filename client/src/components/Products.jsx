@@ -5,7 +5,7 @@ import Search from './Search'
 import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
 import Layout from './shared/Layout'
 import { getProducts } from '../services/product'
-import sideBar from './sideBar'
+
 
 class Products extends Component {
   constructor() {
@@ -22,6 +22,8 @@ class Products extends Component {
     const products = await getProducts()
     this.setState({ products })
   }
+
+  
 
   handleSearchChange = event => {
     const filter = () => {

@@ -17,23 +17,23 @@ const unauthenticatedOptions = (
     </>
 )
 
-// const alwaysOptions = (
-//     <>
-//         <NavLink className="link" to="/products">Featured Posts</NavLink>
-//     </>
-// )
+const alwaysOptions = (
+    <>
+        <NavLink className="link" to="/products">Featured Posts</NavLink>
+    </>
+)
 
 
 
-const Nav = ({ user }) => {
+const Nav = ({  user }) => {
     
         return (
             <nav>
             <div className="nav">
                     <NavLink className="logo" to="/"><img src={Logo} alt="Logo" /></NavLink>
                     <div className="links">
-                        {user && <div className="link welcome">Welcome, {user.user.username}</div>}
-                        {/* {alwaysOptions} */}
+                        {user && <div className="link welcome">Welcome, { user.username}</div>}
+                        {alwaysOptions}
                         {user ? authenticatedOptions : unauthenticatedOptions}
                     </div>
                 </div>
