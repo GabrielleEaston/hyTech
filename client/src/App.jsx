@@ -19,8 +19,9 @@ class App extends Component {
     }
   }
 
+
   async componentDidMount() {
-    const user = await verifyUser()
+    const user =  await verifyUser()
     if (user) {
       this.setState({ user })
     }

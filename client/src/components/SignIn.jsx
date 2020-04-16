@@ -44,6 +44,8 @@ class SignIn extends Component {
             })
     }
 
+
+    
     renderError = () => {
         const toggleForm = this.state.isError ? 'danger' : ''
         if (this.state.isError) {
@@ -56,9 +58,10 @@ class SignIn extends Component {
             return <button type="submit">Sign In</button>
         }
     }
-
+    
     render() {
         const { username, password } = this.state
+        
 
         return (
             <div className="form-container">
