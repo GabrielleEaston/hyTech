@@ -5,7 +5,7 @@ import Search from './Search'
 import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
 import Layout from './shared/Layout'
 import { getProducts } from '../services/product'
-import sideBar from './sideBar'
+
 
 
 class Products extends Component {
@@ -88,7 +88,7 @@ class Products extends Component {
                 <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
               </select>
             </form>
-            <sideBar />
+           
           </div>
           <div className="main">
 
