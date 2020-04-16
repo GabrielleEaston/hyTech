@@ -28,10 +28,10 @@ class ProductDetail extends Component {
     return (
       <Layout user={this.props.user}>
         <div className="product-detail">
-          <img className="product-detail-image" src={product.imgURL} alt={product.name} />
           <div className="detail">
-            <div className="name">{product.name}</div>
-            <div className="name">{product.sub_title}</div>
+            <div className="title">{product.name}</div>
+            <div className="sub-title">{product.sub_title}</div>
+          <img className="product-detail-image" src={product.imgURL} alt={product.name} />
             <div className="description">{product.description}</div>
             <div className="button-container">
               <button className="edit-button"><Link className="edit-link" to={`/products/${product._id}/edit`}>Edit</Link></button>
