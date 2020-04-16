@@ -42,6 +42,7 @@ class ProductCreate extends Component {
         }
         return (
             <Layout user={this.props.user}>
+                
                 <form className="create-form" onSubmit={this.handleSubmit}>
                     <input
                         className="input-name"
@@ -78,7 +79,7 @@ class ProductCreate extends Component {
                         required
                         onChange={this.handleChange}
                     />
-                    <button type='submit' className="submit-button">Post your blog</button>
+                    <button type='submit' className="submit-button">Submit Post</button>
                 </form>
             </Layout>
         )

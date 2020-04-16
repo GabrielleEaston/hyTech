@@ -1,9 +1,10 @@
 .products {
- 
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-left: 10px;
+   
+    justify-content: center;
+    padding: 40px;
 }
 
 .sort-container {
