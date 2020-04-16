@@ -1,9 +1,10 @@
 .create-form {
+  margin-top: -150px;
     padding-top: 100px;
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 90vw;
     justify-content: space-evenly;
 }
 
@@ -25,6 +26,7 @@ textarea {
 h1 {
     font-size: 36px;
     color: #000033;
+    margin-top: 230px;
 }
 
 .input-name {
