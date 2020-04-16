@@ -11,7 +11,8 @@ class ProductDetail extends Component {
       product: {
         name: '',
         description: '',
-        imgURL: ''
+        imgURL: '',
+        sub_title: ''
       }
     }
   }

@@ -12,7 +12,7 @@ class ProductCreate extends Component {
                 name: '',
                 description: '',
                 imgURL: '',
-                price: ''
+                sub_title: ''
             },
             created: false
         }

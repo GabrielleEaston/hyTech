@@ -2,7 +2,7 @@ import React from 'react';
 import './Product.css';
 import { Link } from 'react-router-dom'
 
-const Product = (props) => {
+const sideBar = (props) => {
     return (
       <>
         
@@ -15,4 +15,4 @@ const Product = (props) => {
     )
 }
 
-export default Product
+export default sideBar
