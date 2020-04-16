@@ -43,7 +43,7 @@ class App extends Component {
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
           <Route exact path="/products" render={() => <Products user={user} />} />
-          <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to='/signup' />} />
+          <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to='/add-product' />} />
           <Route exact path="/products/:id/edit" render={(props) => user ? <ProductEdit {...props} user={user} /> : <Redirect to='/' />} />
           <Route exact path="/products/:id" render={(props) => <ProductDetail {...props} history={props.history} user={user} />} />
         </Switch>

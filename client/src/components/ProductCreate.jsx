@@ -41,7 +41,8 @@ class ProductCreate extends Component {
             return <Redirect to={`/products`} />
         }
         return (
-            <Layout user={this.props.user}>
+          <Layout user={this.props.user}>
+            <h1>Create Your First Post</h1>
                 
                 <form className="create-form" onSubmit={this.handleSubmit}>
                     <input
@@ -79,7 +80,7 @@ class ProductCreate extends Component {
                         required
                         onChange={this.handleChange}
                     />
-                    <button type='submit' className="submit-button">Submit Post</button>
+              <button type='submit' className="submit-button">Submit Post</button>
                 </form>
             </Layout>
         )
