@@ -12,6 +12,7 @@ class ProductCreate extends Component {
                 name: '',
                 description: '',
                 imgURL: '',
+                author:'',
                 sub_title: ''
             },
             created: false
@@ -45,7 +46,16 @@ class ProductCreate extends Component {
             <h1>Create Your First Post</h1>
                 
                 <form className="create-form" onSubmit={this.handleSubmit}>
-                    <input
+                <input
+                        className="input-author"
+                        placeholder='Author Name'
+                        value={product.author}
+                        name='name'
+                        required
+                        autoFocus
+                        onChange={this.handleChange}
+                    />      
+              <input
                         className="input-name"
                         placeholder='Title'
                         value={product.name}
