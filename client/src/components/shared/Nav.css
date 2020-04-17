@@ -20,25 +20,22 @@ nav {
     width: 100%;
 }
 
-.logo {
-    font-family: 'Kalam', cursive;
-    text-align: center;
-    font-weight: bold;
-    font-size: 34px;
-    letter-spacing: -3px;
-    flex: 1;
-    max-width: 30vw;
-    transition: 250ms all;
-    color: white;
+
+.logo img{
+  flex: 1;
+  width: 250px;
+  transition: 250ms all;
+  max-width: 30vw;
 }
 
-.logo:hover {
-    transform: scale(1.004);
+.logo img:hover {
+    transform: scale(1.01);
 }
 
 .links {
+  display: block;
     flex: 2;
-    max-width: 60vw;
+    /* max-width: 60vw; */
     align-items: center;
     font-size: 18px;
     display: flex;
@@ -64,18 +61,17 @@ a {
 
 @media (max-width: 500px) {
     nav {
-        width: 98%;
+        width: 100%;
     }
     .logo {
         max-width: 50%;
     }
     .links {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+      
         width: 100%;
-        max-width: 10vw;
-        margin-top: 120px;
+        /* max-width: 10vw; */
+      
         font-size: 14px;
         margin-left: 0;
     }
