@@ -103,19 +103,22 @@
   .title {
     font-size: 34px;
     margin-top: 120px;
-    color: #000033
+    color: #000033;
+    margin-left: 25px;
 }
 
 .sub-title {
   font-size: 22px;
   padding: 5px;
-  color: #000033
+  color: #000033;
+  margin-left: 25px;
 }
 
 
 .description {
     padding: 10px;
     letter-spacing: .9px;
+    width: 100%;
 }
     .product-detail-image {
         width: 100%;
