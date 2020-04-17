@@ -15,6 +15,7 @@ const Product = (props) => {
     <div>{props.createdAt.split('T')[0]}</div>
                 <img className="product-image" src={props.imgURL} alt={props.name} />
           <div className="product-description">{props.description}</div>
+              <button>Read More</button>
             </Link>
         </>
     )
