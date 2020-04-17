@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 
 .product-detail {
-    /* display: flex; */
     padding: 100px;
     padding-top: 80px;
 }
@@ -54,8 +53,10 @@
     width: 70%;
     align-self: center;
     height: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
     
-    /* padding: 40px 40px; */
+
 }
 
 .button-container {
@@ -86,11 +87,7 @@
     .name {
         font-size: 32px;
     }
-    .product-detail-image {
-        /* width: 500px;
-        margin-top: -100px;
-        padding: 10px; */
-    }
+   
     .product-detail {
         display: flex;
         flex-direction: column;
@@ -119,8 +116,7 @@
 }
     .product-detail-image {
         width: 100%;
-        /* margin: 15px;
-        padding: 10px; */
+       
     }
     .product-detail {
         padding: 0px;
