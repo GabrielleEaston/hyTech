@@ -79,7 +79,7 @@ class Products extends Component {
           <div className="side">
             <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
             <form className="sort-container" onSubmit={this.handleSubmit}>
-              <label htmlFor="sort">SORT BY:</label>
+              <label className="sortBy" htmlFor="sort">SORT BY:</label>
 
               <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
                 <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
