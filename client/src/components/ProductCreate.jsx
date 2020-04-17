@@ -46,15 +46,20 @@ class ProductCreate extends Component {
             <h1>Create Your First Post</h1>
                 
                 <form className="create-form" onSubmit={this.handleSubmit}>
-                <input
+              <div>
+              <label className="author-name">Author Name</label>  
+              <input
                         className="input-author"
                         placeholder='Author Name'
                         value={product.author}
-                        name='name'
+                        name='author'
                         required
                         autoFocus
                         onChange={this.handleChange}
-                    />      
+                />  
+              </div>
+              <div>
+              <label className="title-name">Title</label>  
               <input
                         className="input-name"
                         placeholder='Title'
@@ -63,7 +68,10 @@ class ProductCreate extends Component {
                         required
                         autoFocus
                         onChange={this.handleChange}
-                    />
+                />
+              </div>
+              <div className="subtitle-div">
+              <label className="subtitle-name">Subtitle</label>  
                     <input
                         className="input-name"
                         placeholder='Sub title'
@@ -72,16 +80,23 @@ class ProductCreate extends Component {
                         required
                         autoFocus
                         onChange={this.handleChange}
-                    />
+                />
+              </div>
+             
+              <div>
+              <label className="blog-div">Write your blog here</label>  
                     <textarea
                         className="textarea-description"
                         rows={10}
-                        placeholder='Description'
+                        placeholder='Blog post'
                         value={product.description}
                         name='description'
                         required
                         onChange={this.handleChange}
-                    />
+                />
+              </div>
+              <div>
+              <label className="image-div">Insert Image Link</label>  
                     <input
                         className="input-image-link"
                         placeholder='Image Link'
@@ -89,7 +104,8 @@ class ProductCreate extends Component {
                         name='imgURL'
                         required
                         onChange={this.handleChange}
-                    />
+              />
+              </div>
               <button type='submit' className="submit-button">Submit Post</button>
                 </form>
             </Layout>
