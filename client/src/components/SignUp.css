@@ -9,6 +9,11 @@ body {
   height: 100%;
 }
 
+label {
+  font-size:20px;
+  width: 400px;
+}
+
 button {
   cursor: pointer;
   font-size: 1rem;
@@ -55,10 +60,10 @@ button {
   align-items: center;
   margin-top: 3em;
 }
-.form-container {
+.form-container-sign-up {
   align-self: center;
   padding: 1em;
-  width: 50%;
+  width: 80%;
   height: 80%;
   margin: 4em auto;
   border: 2px solid #b0bec5;
@@ -67,15 +72,15 @@ button {
   transition: all 2s ease;
 }
 
-.form-container .danger {
+.form-container-sign-up .danger {
   background: #e57373;
 }
 
-.form-container h3 {
+.form-container-sign-up h3 {
   text-align: center;
 }
 
-.form-container form {
+.form-container-sign-up form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,7 +88,7 @@ button {
   width: 80%;
 }
 
-.form-container form input {
+.form-container-sign-up form input {
   width: 100%;
   padding: 0.6em 1em;
   margin: 0.5em auto;
@@ -94,31 +99,31 @@ button {
   transition: all 0.4s ease;
 }
 
-.form-container form input:focus,
-.form-container form input:active {
+.form-container-sign-up form input:focus,
+.form-container-sign-up form input:active {
   border: 2px solid #82ada9;
 }
 
-.form-container form input:valid {
+.form-container-sign-up form input:valid {
   border: 2px solid #66bb6a;
 }
 
-.form-container form button {
+.form-container-sign-up form button {
   width: 50%;
   margin: 1em auto;
-  background: #56c8d8;
+  background: #b0bec5;
   border: none;
 }
 
-.form-container form button:hover {
+.form-container-sign-up form button:hover {
   box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.form-container form a {
+.form-container-sign-up form a {
   margin: auto;
 }
 
-.form-container form label {
+.form-container-sign-up form label {
   margin-top: 0.6em;
 }
 
@@ -330,4 +335,12 @@ button {
   grid-template-rows: auto;
   width: 80%;
   margin: 4em auto;
+}
+
+@media (max-width: 420px){
+
+  .form-container {
+    width: 80%
+  }
+
 }

@@ -50,7 +50,7 @@ class ProductCreate extends Component {
               <label className="author-name">Author Name</label>  
               <input
                         className="input-author"
-                        placeholder='Author Name'
+                        placeholder='Author'
                         value={product.author}
                         name='author'
                         required
