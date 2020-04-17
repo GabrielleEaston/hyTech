@@ -24,10 +24,6 @@ _**HyTech** TechBlog community where users can provide tech input_
 
 - Desktop Create Blog
 
-<img src="hhttps://i.imgur.com/uhOZdlc.png" align="center" height="auto" width="600" >
-
-- Desktop Edit Blog
-
 <img src="https://i.imgur.com/uhOZdlc.png" align="center" height="auto" width="600" >
 
 - Desktop Sign Up
