@@ -48,7 +48,7 @@
     padding: 5px;
     width: 100%;
 }
-.input-subtitle {
+.input-subtitle, .input-author {
   font-family: 'Share Tech', sans-serif;
   font-size: 2em;
   letter-spacing: 1px;
