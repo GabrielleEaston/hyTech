@@ -21,3 +21,14 @@
 .search-input::placeholder {
     letter-spacing: .3px;
 }
+
+@media (max-width: 500px) {
+    .search-input {
+        width: 300px;
+       
+    }
+    .search-form {
+        width: 200px;
+       
+    }
+}
