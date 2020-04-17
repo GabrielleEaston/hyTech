@@ -16,7 +16,7 @@ body {
 
 label {
   font-size: 40px;
-  width: 200px;
+  width: 20px;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -25,7 +25,7 @@ input:focus, textarea:focus, select:focus {
 
 input, textarea {
     font-size: 64px;
-    width: 60%;
+    width: 100%;
    font-family: 'Share Tech', sans-serif;
    border: solid black 1px;
      
@@ -44,10 +44,11 @@ h1 {
     margin-bottom: 90px;
     font-family: 'Share Tech', sans-serif;
     text-align: center;
+    margin-top: 130px;
 }
 
 .input-name {
-    font-size: 64px;
+    font-size: 44px;
     font-family: 'Share Tech', sans-serif;
     
 }
@@ -55,6 +56,10 @@ h1 {
 .author-name {
   margin-right: 20px;
   font-family: 'Share Tech', sans-serif;
+}
+
+.input-author {
+  font-size: 44px;
 }
 .title-name{
   margin-right: 160px;
@@ -142,6 +147,7 @@ margin: 0 auto;
   
   h1 {
       font-size: 35px;
+      margin-top: 120px;
   }
   
   .input-name {
