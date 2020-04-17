@@ -6,7 +6,7 @@ console.log("JWT: ", jsonWebToken)
 let apiUrl
 
 const apiUrls = {
-    production: 'https://hytech2.herokuapp.com/api',
+    production: 'https://hytech-app.herokuapp.com/api',
     development: 'http://localhost:3000/api'
 }
 
