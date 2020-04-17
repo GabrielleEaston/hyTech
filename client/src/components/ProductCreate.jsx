@@ -12,7 +12,8 @@ class ProductCreate extends Component {
                 name: '',
                 description: '',
                 imgURL: '',
-                sub_title: ''
+            sub_title: '',
+                author: ''
             },
             created: false
         }
@@ -54,15 +55,18 @@ class ProductCreate extends Component {
                         autoFocus
                         onChange={this.handleChange}
                     />
+                    
+              
                     <input
                         className="input-name"
                         placeholder='Sub title'
-                        value={product.sub_title}
-                        name='sub_title'
+                        value={product.author}
+                        name='author'
                         required
                         autoFocus
                         onChange={this.handleChange}
                     />
+
                     <textarea
                         className="textarea-description"
                         rows={10}
