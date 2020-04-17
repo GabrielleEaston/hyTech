@@ -20,9 +20,7 @@
     width: 300px;
 }
 
-button {
-    margin-right: 10px;
-}
+
 
 .product-description {
     font-family: Arial, Helvetica, sans-serif;
@@ -42,12 +40,15 @@ button {
 
 @media (max-width: 500px) {
     .product {
-        width: 100%;
+        width: 300px;
         margin-bottom: 20px;
     }
     .product-image {
         width: 180px;
         margin: 15px;
         padding: 10px;
+    }
+    button {
+        margin-top: 20px;
     }
 }
