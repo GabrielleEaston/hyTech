@@ -40,27 +40,27 @@ _**HyTech** TechBlog community where users can provide tech input_
 
 - Mobile Home Page
 
-<img src="https://i.imgur.com/S3N2p3D.png" align="center" height="auto" width="600" >
+<img src="https://i.imgur.com/S3N2p3D.png" align="center" height="auto" width="420" >
 
 - Mobile Create Page
 
-<img src="https://i.imgur.com/DEricEk.png" align="center" height="auto" width="600" >
+<img src="https://i.imgur.com/DEricEk.png" align="center" height="auto" width="420" >
 
 - Mobile Edit Page
 
-<img src="https://i.imgur.com/PFZRzOZ.png" align="center" height="auto" width="600" >
+<img src="https://i.imgur.com/PFZRzOZ.png" align="center" height="auto" width="420" >
 
 - Mobile Delete Page
 
-<img src="https://i.imgur.com/5E9jbA5.png" align="center" height="auto" width="600" >
+<img src="https://i.imgur.com/5E9jbA5.png" align="center" height="auto" width="420" >
 
 - Mobile SignUP
 
-<img src="https://i.imgur.com/JKsufjK.png" align="center" height="auto" width="600" >
+<img src="https://i.imgur.com/JKsufjK.png" align="center" height="auto" width="420" >
 
 - Mobile Login
 
-<img src="https://i.imgur.com/PCi15q6.png" align="center" height="auto" width="600" >
+<img src="https://i.imgur.com/PCi15q6.png" align="center" height="auto" width="420" >
 
 <br>
 
