@@ -36,6 +36,7 @@ select {
 .rows{
   display: flex;
   flex-wrap: wrap;
+  justify-items: center;
   
 }
 
@@ -76,8 +77,15 @@ select {
         justify-content: space-around;
     }
     .sort-container {
-        width: 100%;
+        margin-left: -50px;
         justify-content: center;
-        margin: 0px;
+    }
+    .side {
+      background-color: white;
+   margin-left: 250px;
+    }
+    .main {
+      width: 375px;
+      height: 200px;
     }
 }
