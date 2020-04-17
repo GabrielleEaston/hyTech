@@ -23,7 +23,8 @@
     font-size: 18px;
     font-family: 'Share Tech', sans-serif;
     font-weight: bold;
-    margin-left: 30px
+    margin-left: 30px;
+    width: 200px;
    
 }
 .sort {
