@@ -91,9 +91,6 @@ _**HyTech** TechBlog community where users can provide tech input_
 
 ### MVP
 
-<br>
-
-#### Goals
 
 - Have the frontend deployed on [Surge](https://gist.github.com/brunopgalvao/0d8fcaabe8f1a6d862397160d933e3f6)
 - Have the backend deployed on [Heroku](https://www.heroku.com)
@@ -107,8 +104,6 @@ _**HyTech** TechBlog community where users can provide tech input_
 - Be properly indented and spaced
 
 
-<br>
-
 
 <br>
 
@@ -116,30 +111,16 @@ _**HyTech** TechBlog community where users can provide tech input_
 ### Post-MVP
 
 - add like button to the post
-- allow users to leave comments for the post 
+- allow users to leave comments for the post
+- toggle to change screen mode 
+- add an alert message popup
+- add functionality to the side bar  
 
 <br>
 
 
 ---
 
-## Project Delivery
 
-> The Delivery section should be expanded and revised as you work on your project.
-
-### Code Showcase
-
-> Use this section to include a brief code snippet of functionality that you are proud of an a brief description
-
-
-### Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution.
-
-| Error                                                   | Resolution                                             |
-| :------------------------------------------------------ | :----------------------------------------------------- |
-
-
----
 
 

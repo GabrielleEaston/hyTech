@@ -12,7 +12,8 @@ class ProductEdit extends Component {
         name: '',
         description: '',
         imgURL: '',
-        sub_title: ''
+        sub_title: '',
+        author: ''
       },
       updated: false,
       deleted: false
@@ -65,7 +66,6 @@ class ProductEdit extends Component {
     return (
       <Layout user={this.props.user}>
         <div className="product-edit">
-          <h3>Edit Your Post</h3>
           <div className="image-container">
             <img className="edit-product-image" src={product.imgURL} alt={product.name} />
             <form onSubmit={this.handleSubmit}>
@@ -80,6 +80,16 @@ class ProductEdit extends Component {
             </form>
           </div>
           <form className="edit-form" onSubmit={this.handleSubmit}>
+            <input
+              className="input-author"
+              placeholder='Author Name'
+              value={product.author}
+              name='author'
+              required
+              autoFocus
+              onChange={this.handleChange}
+            />
+
             <input
               className="input-name"
               placeholder='Name'
@@ -112,6 +122,7 @@ class ProductEdit extends Component {
               onChange={this.handleChange}
             />
             <br />
+
             <button type='submit' className="save-button">Save</button>
             <button className="delete-button" onClick={(this.handleDelete)}>Delete</button>
           </form>

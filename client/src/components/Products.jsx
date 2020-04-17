@@ -69,7 +69,7 @@ class Products extends Component {
   render() {
     const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
     const PRODUCTS = products.map((product, index) =>
-      <Product _id={product._id} name={product.name} imgURL={product.imgURL} description={product.description} createdAt={product.createdAt} key={index} />
+      <Product _id={product._id} name={product.name} author={product.author} imgURL={product.imgURL} description={product.description} createdAt={product.createdAt} key={index} />
     )
 
     return (
@@ -79,7 +79,7 @@ class Products extends Component {
           <div className="side">
             <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
             <form className="sort-container" onSubmit={this.handleSubmit}>
-              <label htmlFor="sort">SORT BY:</label>
+              <label className="sortBy" htmlFor="sort">SORT BY:</label>
 
               <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
                 <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
@@ -88,7 +88,7 @@ class Products extends Component {
                 <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
               </select>
             </form>
-           
+
           </div>
           <div className="main">
 
