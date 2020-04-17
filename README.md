@@ -16,51 +16,51 @@ _**HyTech** TechBlog community where users can provide tech input_
 
 - Desktop Landing
 
-<img src="https://i.imgur.com/x5Em7ZG.png" align="center" height="auto" width="500" >
+<img src="https://i.imgur.com/x5Em7ZG.png" align="center" height="auto" width="600" >
 
 - Desktop When Logged in
 
-![HOME](https://i.imgur.com/sCJsvpd.png)
+<img src="https://i.imgur.com/sCJsvpd.png" align="center" height="auto" width="600" >
 
 - Desktop Create Blog
 
-![BLOG Create](https://i.imgur.com/uhOZdlc.png)
+<img src="hhttps://i.imgur.com/uhOZdlc.png" align="center" height="auto" width="600" >
 
 - Desktop Edit Blog
 
-![BLOG Edit](https://i.imgur.com/uhOZdlc.png)
+<img src="https://i.imgur.com/uhOZdlc.png" align="center" height="auto" width="600" >
 
 - Desktop Sign Up
 
-![SignUp](https://i.imgur.com/bnFBa9B.png)
+<img src="https://i.imgur.com/bnFBa9B.png" align="center" height="auto" width="600" >
 
 - Desktop LogIn
 
-![Login](https://i.imgur.com/dGeyVtE.png)
+<img src="https://i.imgur.com/dGeyVtE.png" align="center" height="auto" width="600" >
 
 - Mobile Home Page
 
-![MOBILE](https://i.imgur.com/S3N2p3D.png)
+<img src="https://i.imgur.com/S3N2p3D.png" align="center" height="auto" width="600" >
 
 - Mobile Create Page
 
-![create](https://i.imgur.com/DEricEk.png)
+<img src="https://i.imgur.com/DEricEk.png" align="center" height="auto" width="600" >
 
 - Mobile Edit Page
 
-![edit](https://i.imgur.com/PFZRzOZ.png)
+<img src="https://i.imgur.com/PFZRzOZ.png" align="center" height="auto" width="600" >
 
 - Mobile Delete Page
 
-![delete](https://i.imgur.com/5E9jbA5.png)
+<img src="https://i.imgur.com/5E9jbA5.png" align="center" height="auto" width="600" >
 
 - Mobile SignUP
 
-![signUp](https://i.imgur.com/JKsufjK.png)
+<img src="https://i.imgur.com/JKsufjK.png" align="center" height="auto" width="600" >
 
 - Mobile Login
 
-![login](https://i.imgur.com/PCi15q6.png)
+<img src="https://i.imgur.com/PCi15q6.png" align="center" height="auto" width="600" >
 
 <br>
 
