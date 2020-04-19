@@ -1,7 +1,9 @@
 import axios from 'axios'
 
-const jsonWebToken = localStorage.getItem('token') || null
-console.log("JWT: ", jsonWebToken)
+
+     const jsonWebToken = localStorage.getItem('token') || null
+     console.log("JWT: ", jsonWebToken)
+   
 
 let apiUrl
 
