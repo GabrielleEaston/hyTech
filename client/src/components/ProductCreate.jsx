@@ -107,7 +107,8 @@ class ProductCreate extends Component {
               />
               </div>
               <button type='submit' className="submit-button">Submit Post</button>
-                </form>
+            </form>
+            
             </Layout>
         )
     }
