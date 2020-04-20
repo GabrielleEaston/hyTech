@@ -70,7 +70,7 @@ class Products extends Component {
   render() {
     const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
     const PRODUCTS = products.map((product, index) =>
-      <Product _id={product._id} name={product.name} author={product.author} imgURL={product.imgURL} description={product.description} subTitle={product.sub_title} createdAt={product.createdAt} key={index} />
+      <Product _id={product._id} name={product.name} author={product.author} imgURL={product.imgURL} description={product.description} subTitle={product.sub_title} like={product.like} createdAt={product.createdAt} key={index} />
     )
 
     const SIDEBAR = products.map((product, index) =>
@@ -96,7 +96,7 @@ class Products extends Component {
 {/* <DarkMode/> */}
             <h2 className="hot-blog">HOT BLOGS</h2>
             {SIDEBAR}
-            
+
           </div>
           <div className="main">
 
