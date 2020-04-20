@@ -48,7 +48,7 @@ class App extends Component {
     if (this.state.mode) {
     return (
       <div className="darkMode">
-        <button onClick={this.toggleDarkMode} className="lightSwitch">Dark</button>
+        <button onClick={this.toggleDarkMode} className="lightSwitch">Lights On</button>
         <Switch>
           <Route exact path="/products" render={() => <Products user={user} />} />
           <Route exact path="/" render={() => <Products user={user} />} />
@@ -66,7 +66,7 @@ class App extends Component {
     } else {
       return (
         <div className="lightMode">
-        <button onClick={this.toggleDarkMode} className="lightSwitch">Light</button>
+        <button onClick={this.toggleDarkMode} className="lightSwitch">Lights Off</button>
         <Switch>
           <Route exact path="/products" render={() => <Products user={user} />} />
           <Route exact path="/" render={() => <Products user={user} />} />
