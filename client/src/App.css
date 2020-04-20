@@ -1,5 +1,32 @@
-.app {
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.darkMode{
+  background-color: #323232;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.lightMode {
+  background-color: white;
+  color: #1f1f1f;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.lightSwitch {
+  
+margin-top: 130px;
+  z-index: 1;
+}
+.product-container {
+  background-color: white;
+  
+}
+

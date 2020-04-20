@@ -12,7 +12,7 @@ const main = async () => {
         "imgURL": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "description": "Some bigger companies go only for candidates with a four-year degree. Others look at the technical skills of their candidates more than what degrees they have earned. In a Forbes article, “15 great jobs that don’t require a four-year degree,” a recruiter says that candidates’ code samplings and their fit with the work culture mattered most to his company. “Of the people we hired, I had no idea who had a degree or not. If we liked them and thought they were cool and they wrote good-quality code, that’s all that mattered. So, you could teach yourself some tech. Programmers need to learn new coding languages to keep up with technology changes. Once you’ve picked up enough, you could go to a small companies and ask for an apprentice-like role, stressing you are going to learn more on the job. They will probably appreciate your initiative and may give you a job. Teaching yourself using online courses, taking on small projects, and getting to work as an assistant to a freelancer can help you learn by yourself. Read the full blog at https://www.mbacrystalball.com/blog/2018/04/16/tech-industry-get-in/.",
         "sub_title": "Getting into tech with no degree",
-        "like": 0
+        "like": 1
       },
 
       {

@@ -56,11 +56,13 @@ button {
   margin-top: 3em;
 }
 .form-container {
+  margin-top: 20px;
   align-self: center;
-  padding: 1em;
+  /* padding: 1em; */
   width: 50%;
-  height: 80%;
-  margin: 4em auto;
+  height: 100%;
+  margin-bottom: 300px;
+  /* margin: 4em auto; */
   border: 2px solid #b0bec5;
   border-radius: 6px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
