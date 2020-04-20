@@ -6,7 +6,7 @@ import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
 import Layout from './shared/Layout'
 import DarkMode from "./DarkMode"
 import { getProducts } from '../services/product'
-
+import SideBar from './SideBar'
 
 
 class Products extends Component {
@@ -70,7 +70,11 @@ class Products extends Component {
   render() {
     const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
     const PRODUCTS = products.map((product, index) =>
-      <Product _id={product._id} name={product.name} author={product.author} imgURL={product.imgURL} description={product.description} createdAt={product.createdAt} key={index} />
+      <Product _id={product._id} name={product.name} author={product.author} imgURL={product.imgURL} description={product.description} subTitle={product.sub_title} createdAt={product.createdAt} key={index} />
+    )
+
+    const SIDEBAR = products.map((product, index) =>
+      <SideBar _id={product._id} name={product.name} author={product.author} imgURL={product.imgURL} description={product.description} subTitle={product.sub_title} createdAt={product.createdAt} key={index} />
     )
 
     return (
@@ -90,6 +94,9 @@ class Products extends Component {
               </select>
             </form>
 {/* <DarkMode/> */}
+            <h2 className="hot-blog">HOT BLOGS</h2>
+            {SIDEBAR}
+            
           </div>
           <div className="main">
 

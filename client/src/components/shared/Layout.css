@@ -6,12 +6,15 @@
    
 }
 
+
 .layout-children {
     flex: 2;
     padding: 10px;
     background-color: transparent;
     
 }
+
+
 
 @media (max-width: 500px) {
     .layout {
