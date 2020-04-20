@@ -119,7 +119,7 @@ div.detail {
 .description {
     padding: 10px;
     letter-spacing: .9px;
-    width: 100%;
+    width: 100vw;
 }
     .product-detail-image {
         width: 100%;
