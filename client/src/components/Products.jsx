@@ -92,7 +92,7 @@ class Products extends Component {
                 <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
               </select>
             </form>
-            <h2>HOT BLOGS</h2>
+            <h2 className="hot-blog">HOT BLOGS</h2>
             {SIDEBAR}
             
           </div>

@@ -9,14 +9,15 @@ const SideBar = (props) => {
   return (
     <>
       
-    <div className="product">
+    <div className="txt">
      
         <div className="small-text">{props.name}</div>
         <div className="small-text">{props.sub_title}</div>
+        <div className="product-description">{props.description}</div>
       <Link className="button" to={`/products/${props._id}`}>
-          <h4>Read</h4>
+          Read
       </Link>
-      <div className="product-description">{props.description}</div>
+      
      
     </div>
   </>

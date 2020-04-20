@@ -19,7 +19,7 @@ const Product = (props) => {
       
         <img className="product-image" src={props.imgURL} alt={props.name} />
         <div className="product-description">{props.description}</div>
-        <Link className="button" to={`/products/${props._id}`}>
+        <Link  to={`/products/${props._id}`}>
           <button>Read More</button>
           </Link>
       </div>
