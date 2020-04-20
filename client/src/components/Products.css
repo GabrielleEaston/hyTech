@@ -2,9 +2,10 @@
     width: 650px;
     display: flex;
     flex-wrap: wrap;
-   
+   background-color: transparent;
     justify-content: center;
     padding: 40px;
+    margin-top: 150px;
 }
 
 .sort-container {
@@ -48,17 +49,31 @@ select {
 }
 
 .products a{
-  margin-top: 200px;
+ 
   padding-left: 10px;
+  background-color: transparent;
+  margin-top: 10px;
+  padding-left: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0px 0px 3px 1px #CECECE;
+  transition: 250ms all;
+  padding: 20px;
+  margin-bottom: 60px;
+  margin-left: 320px;
+  width: 180px;
 }
 
 .side{
   
   flex: 2 ;
-  background-color: #f1f1f1;
+  background-color: transparent;
   border-radius: 5px solid black;
   padding: 5px;
-  width: 350px;
+  width: 450px;
   margin-top: 200px;
   margin-right: 100px;
   align-items: center;
@@ -67,9 +82,10 @@ select {
 .main{
  flex: 2;
   border-radius: 5px solid black;
-  background-color: white;
-  width:750px;
+  background-color: transparent;
+  width:40vw;
   margin-left: 0px;
+  color: gray
   
   
 }
@@ -77,22 +93,61 @@ select {
   box-sizing: border-box;
 }
 
+.layout .products{
+width: 60vw;
+}
 
-@media (max-width: 500px) {
+.layout-children .products{
+  width: 40vw;
+}
+
+
+@media (max-width: 414px) {
     .products {
-        width: 100%;
+        width: 40vw;
         justify-content: space-around;
+        margin-top: -30px;
+        padding-bottom: 40px;
     }
     .sort-container {
-        margin-left: -50px;
+        margin-left: -45px;
         justify-content: center;
     }
     .side {
       background-color: white;
    margin-left: 250px;
+   padding-right: 50px;
+   
     }
     .main {
       width: 375px;
-      height: 200px;
+  
     }
+    .products a{
+      margin-top: 10px;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      box-shadow: 0px 0px 3px 1px #CECECE;
+      transition: 250ms all;
+      padding: 20px;
+      margin-bottom: 30px;
+      width: 180px;
+      margin-left: 25px;
+    }
+
+    .main{
+      
+       width:60vw;
+       
+     }
+
+     .layout-children .products{
+      width: 50vw;
+    }
+    
+    
+
 }

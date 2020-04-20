@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css'
-// import Home from './components/Home'
 import Products from './components/Products'
 import ProductCreate from './components/ProductCreate'
 import ProductEdit from './components/ProductEdit'
@@ -15,11 +14,23 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      user: null
+      user: null,
+      mode: false
     }
+    this.toggleDarkMode = this.toggleDarkMode.bind(this);
   }
 
+  toggleDarkMode() {
+    this.setState((state) => {
+      if (state.mode === true) {
 
+        return {mode: false}
+      } else {
+     
+        return { mode: true };
+      }
+    });
+  }
   async componentDidMount() {
     const user = await verifyUser()
     if (user) {
@@ -34,8 +45,10 @@ class App extends Component {
   render() {
     const { setUser, clearUser } = this
     const { user } = this.state
+    if (this.state.mode) {
     return (
-      <div className="app">
+      <div className="darkMode">
+        <button onClick={this.toggleDarkMode} className="lightSwitch">Lights On</button>
         <Switch>
           <Route exact path="/products" render={() => <Products user={user} />} />
           <Route exact path="/" render={() => <Products user={user} />} />
@@ -50,6 +63,25 @@ class App extends Component {
         <Footer />
       </div>
     )
+    } else {
+      return (
+        <div className="lightMode">
+        <button onClick={this.toggleDarkMode} className="lightSwitch">Lights Off</button>
+        <Switch>
+          <Route exact path="/products" render={() => <Products user={user} />} />
+          <Route exact path="/" render={() => <Products user={user} />} />
+          <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
+          <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
+          <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
+          <Route exact path="/products" render={() => <Products user={user} />} />
+          <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to='/add-product' />} />
+          <Route exact path="/products/:id/edit" render={(props) => user ? <ProductEdit {...props} user={user} /> : <Redirect to='/' />} />
+          <Route exact path="/products/:id" render={(props) => <ProductDetail {...props} history={props.history} user={user} />} />
+        </Switch>
+        <Footer />
+      </div>
+)
+    }
   }
 }
 
