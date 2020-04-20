@@ -23,13 +23,14 @@
     letter-spacing: .3px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 414px) {
     .search-input {
-        width: 300px;
+        width: 10px;
+        margin-right: 27px;
        
     }
     .search-form {
-        width: 200px;
+        width: 10px;
        
     }
 }

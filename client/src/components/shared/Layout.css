@@ -6,11 +6,14 @@
    
 }
 
+
 .layout-children {
     flex: 2;
     padding: 10px;
     
 }
+
+
 
 @media (max-width: 500px) {
     .layout {
