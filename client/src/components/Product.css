@@ -87,14 +87,16 @@ span.author{
 
 @media (max-width: 500px) {
     .product {
-        width: 300px;
+        width: 500px;
         margin-bottom: 20px;
+        margin-left: 100px;
     }
     .product-image {
         width: 250px;
         margin: 15px;
         padding: 10px;
         height: 150px;
+        margin-right: 100px;
     }
     
     .product-description {
@@ -104,8 +106,11 @@ span.author{
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: justify;
-    margin-left: 25px;
+    margin-left: 30px;
+    font-size: 11px;
   }
   
+  
+
 
 }

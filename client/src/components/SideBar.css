@@ -33,4 +33,7 @@
     width: 260px;
   }
   
+  .side{
+    display: none;
+  }
 }
