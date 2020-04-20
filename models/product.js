@@ -8,8 +8,9 @@ const Product = new Schema(
     imgURL: { type: String, required: true },
     description: { type: String, required: true },
     sub_title: { type: String, required: true },
+    like: 0
   },
-  { timestamps: true}
+  { timestamps: true }
 )
 
 module.exports = mongoose.model('products', Product)

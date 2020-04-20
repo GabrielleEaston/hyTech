@@ -64,6 +64,10 @@ span.author{
   text-align: justify;
   
 }
+.hot-blog{
+  margin-left: 50px;
+  margin-top: 50px;
+}
 
 .product-name {
     font-size: 36px;
