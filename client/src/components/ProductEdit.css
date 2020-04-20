@@ -88,7 +88,7 @@ border-radius: 5px;
 
 
 
-@media (max-width: 420px) {
+@media (max-width: 800px) {
     .input-name {
        
      
@@ -97,7 +97,6 @@ border-radius: 5px;
     }
     .edit-form {
         padding: 0px;
-        margin-top: 100px;
     }
     .textarea-description {
         width: 100%;

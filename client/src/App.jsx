@@ -47,7 +47,7 @@ class App extends Component {
           <Route exact path="/products/:id/edit" render={(props) => user ? <ProductEdit {...props} user={user} /> : <Redirect to='/' />} />
           <Route exact path="/products/:id" render={(props) => <ProductDetail {...props} history={props.history} user={user} />} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     )
   }

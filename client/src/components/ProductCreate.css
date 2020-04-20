@@ -2,7 +2,7 @@ body {
   font-family: 'Share Tech', sans-serif;
 }
 
-/* .create-form {
+.create-form {
   margin-top: -150px;
     padding-top: 100px;
     padding-left:150px;
@@ -12,7 +12,7 @@ body {
     height: 100%;
     justify-content: space-evenly;
     
-} */
+}
 
 label {
   font-size: 40px;
@@ -111,7 +111,7 @@ margin: 0 auto;
 }
 
 @media (max-width: 500px) {
-  /* .create-form {
+  .create-form {
     margin-top: -150px;
       padding-top: 100px;
       padding-left:31px;
@@ -123,7 +123,7 @@ margin: 0 auto;
       justify-content: space-evenly;
       font-size: 35px;
       
-  } */
+  }
   
   label {
     font-size: 20px;
