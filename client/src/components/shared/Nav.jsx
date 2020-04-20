@@ -3,6 +3,7 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import Logo from "../../Logo.png";
 
+
 const authenticatedOptions = (
   <>
     <NavLink className="link" to="/add-product">
@@ -34,9 +35,9 @@ const Nav = ({ user }) => {
         </NavLink>
         <div className="links">
           {user && <div className="link welcome">Welcome, {user.username}</div>}
-          {/* {alwaysOptions} */}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
+       
       </div>
     </nav>
   );

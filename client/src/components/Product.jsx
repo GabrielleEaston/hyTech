@@ -8,7 +8,7 @@ const Product = (props) => {
 
 
   return (
-    <>
+    <div className="product-container">
 
       <Link className="product" to={`/products/${props._id}`}>
         <h5>{props.author}</h5>
@@ -18,7 +18,7 @@ const Product = (props) => {
         <div className="product-description">{props.description}</div>
         <button>Read More</button>
       </Link>
-    </>
+    </div>
   )
 }
 

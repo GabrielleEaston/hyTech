@@ -4,6 +4,7 @@ import Product from './Product'
 import Search from './Search'
 import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
 import Layout from './shared/Layout'
+import DarkMode from "./DarkMode"
 import { getProducts } from '../services/product'
 
 
@@ -88,7 +89,7 @@ class Products extends Component {
                 <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
               </select>
             </form>
-
+{/* <DarkMode/> */}
           </div>
           <div className="main">
 
