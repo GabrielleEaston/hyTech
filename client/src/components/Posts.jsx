@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Post from './Post'
 import Search from './Search'
-import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
+import { AZ, ZA } from "./Sort"
 import Layout from './shared/Layout'
 import { getPosts } from '../services/post'
+
 
 
 
@@ -48,16 +49,6 @@ class Posts extends Component {
           posts: ZA(posts)
         });
         break;
-      case "price-ascending":
-        this.setState({
-          posts: lowestFirst(posts)
-        });
-        break;
-      case "price-descending":
-        this.setState({
-          posts: highestFirst(posts)
-        });
-        break;
       default:
         break
     }
@@ -74,7 +65,7 @@ class Posts extends Component {
     
 
     return (
-
+        
       <Layout user={this.props.user}>
         <div className="rows">
           <div className="side">
@@ -85,23 +76,13 @@ class Posts extends Component {
               <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
                 <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
                 <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
-                <option value="price-ascending">&nbsp; Price, low to high &nbsp;</option>
-                <option value="price-descending">&nbsp; Price, high to low &nbsp;</option>
               </select>
             </form>
-
-           
-
           </div>
-          <div className="main">
-
 
             <div className="posts">
-
               {POSTS}
             </div>
-          </div>
-
         </div>
       </Layout>
 

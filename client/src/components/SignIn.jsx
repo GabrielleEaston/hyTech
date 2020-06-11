@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react'
 //import './SignIn.css'
-import { signIn } from '../services/user'
+import { signIn } from '../services/user';
+import { Form, Container, Button } from "react-bootstrap";
 
 class SignIn extends Component {
     constructor() {
@@ -50,12 +51,12 @@ class SignIn extends Component {
         const toggleForm = this.state.isError ? 'danger' : ''
         if (this.state.isError) {
             return (
-                <button type="submit" className={toggleForm}>
+                <Button variant="primary" type="submit" className={toggleForm}>
                     {this.state.errorMsg}
-                </button>
+                </Button>
             )
         } else {
-            return <button type="submit">Sign In</button>
+            return <Button variant="primary" type="submit">Sign In</Button>
         }
     }
     
@@ -64,30 +65,35 @@ class SignIn extends Component {
         
 
         return (
-            <div className="form-container">
+            <Container>
                 <h3>Sign In</h3>
-                <form onSubmit={this.onSignIn}>
-                    <label>Username</label>
-                    <input
+            <Form onSubmit={this.onSignIn}>
+            <Form.Group controlId="username">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control
                         required
                         type="text"
                         name="username"
                         value={username}
                         placeholder="Enter Username"
                         onChange={this.handleChange}
-                    />
-                    <label>Password</label>
-                    <input
+                />
+              </Form.Group>
+              <Form.Group controlId="password">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
                         required
                         name="password"
                         value={password}
                         type="password"
                         placeholder="Password"
                         onChange={this.handleChange}
-                    />
-                    {this.renderError()}
-                </form>
-            </div>
+                />
+                </Form.Group>
+                {this.renderError()}
+               
+                </Form>
+            </Container>
         )
     }
 }

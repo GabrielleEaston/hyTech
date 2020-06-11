@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
 import { createPost } from '../services/post'
-
+import { Form } from "react-bootstrap";
 class PostCreate extends Component {
     constructor() {
         super()
@@ -44,7 +44,7 @@ class PostCreate extends Component {
           <Layout user={this.props.user}>
             <h1>Create Your First Post</h1>
                 
-                <form className="create-form" onSubmit={this.handleSubmit}>
+                <Form className="create-form" onSubmit={this.handleSubmit}>
               <div>
               <label className="author-name">Author Name</label>  
               <input
@@ -106,7 +106,7 @@ class PostCreate extends Component {
               />
               </div>
               <button type='submit' className="submit-button">Submit Post</button>
-                </form>
+                </Form>
             </Layout>
         )
     }

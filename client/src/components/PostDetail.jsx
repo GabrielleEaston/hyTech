@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from './shared/Layout'
 import { getPost } from '../services/post'
 import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
 
 class PostDetail extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class PostDetail extends Component {
           <img className="product-detail-image" src={post.imgURL} alt={post.name} />
             <div className="description">{post.description}</div>
             <div className="button-container">
-              <button className="edit-button"><Link className="edit-link" to={`/posts/${post._id}/edit`}>Edit</Link></button>
+              <Button variant="light"><Link className="edit-link" to={`/posts/${post._id}/edit`}>Edit</Link></Button>
             </div>
           </div>
         </div>

@@ -1,45 +1,51 @@
 import React from "react";
 //import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
 
 
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/add-product">
+    
+    <NavLink className="link" to="/add-post">
       Create Post
     </NavLink>
     <NavLink className="link" to="/sign-out">
       Sign Out
     </NavLink>
+  
   </>
 );
 
 const unauthenticatedOptions = (
   <>
+
     <NavLink className="link" to="/sign-in">
       Login
     </NavLink>
     <NavLink className="link" to="/sign-up">
       Sign Up
     </NavLink>
+  
   </>
 );
 
 const Nav = ({ user }) => {
   return (
-    <nav>
-      <div className="nav-container">
+    
+
+      <nav>
         <NavLink className="logo" to="/">
           <h1>HyTech</h1>
         </NavLink>
         <div className="links">
-          {user && <div className="link welcome">Welcome, {user.username}</div>}
+          {user && <div className="link welcome"><p style={{textTransform: "capitalize"}}>Welcome, {user.username}</p></div>}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
-       
-      </div>
-    </nav>
+        </nav>
+
+
   );
 };
 
