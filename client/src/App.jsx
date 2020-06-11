@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
-import Products from './components/Products'
-import ProductCreate from './components/ProductCreate'
-import ProductEdit from './components/ProductEdit'
-import ProductDetail from './components/ProductDetail'
+import Posts from './components/Posts'
+import PostCreate from './components/PostCreate'
+import PostEdit from './components/PostEdit'
+import PostDetail from './components/PostDetail'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/user'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import SignOut from './components/SignOut'
-import Footer from './components/shared/Footer'
+import  dark  from "./images/half.png";
 class App extends Component {
   constructor() {
     super()
@@ -48,37 +48,37 @@ class App extends Component {
     if (this.state.mode) {
     return (
       <div className="darkMode">
-        <button onClick={this.toggleDarkMode} className="lightSwitch">Lights On</button>
+        <img style={{width: 30}} src={dark} alt="half light dark circle" onClick={this.toggleDarkMode} className="lightSwitch"/>
         <Switch>
-          <Route exact path="/products" render={() => <Products user={user} />} />
-          <Route exact path="/" render={() => <Products user={user} />} />
+          <Route exact path="/posts" render={() => <Posts user={user} />} />
+          <Route exact path="/" render={() => <Posts user={user} />} />
           <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-          <Route exact path="/products" render={() => <Products user={user} />} />
-          <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to='/add-product' />} />
-          <Route exact path="/products/:id/edit" render={(props) => user ? <ProductEdit {...props} user={user} /> : <Redirect to='/' />} />
-          <Route exact path="/products/:id" render={(props) => <ProductDetail {...props} history={props.history} user={user} />} />
+          <Route exact path="/posts" render={() => <Posts user={user} />} />
+          <Route exact path="/add-post" render={() => user ? <PostCreate user={user} /> : <Redirect to='/add-post' />} />
+          <Route exact path="/posts/:id/edit" render={(props) => user ? <PostEdit {...props} user={user} /> : <Redirect to='/' />} />
+          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} user={user} />} />
         </Switch>
-        <Footer />
+       
       </div>
     )
     } else {
       return (
         <div className="lightMode">
-        <button onClick={this.toggleDarkMode} className="lightSwitch">Lights Off</button>
+          <img style={{width: 30}} src={dark} onClick={this.toggleDarkMode} className="lightSwitch" alt="half dark half white icon"  />
         <Switch>
-          <Route exact path="/products" render={() => <Products user={user} />} />
-          <Route exact path="/" render={() => <Products user={user} />} />
+          <Route exact path="/posts" render={() => <Posts user={user} />} />
+          <Route exact path="/" render={() => <Posts user={user} />} />
           <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
           <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-          <Route exact path="/products" render={() => <Products user={user} />} />
-          <Route exact path="/add-product" render={() => user ? <ProductCreate user={user} /> : <Redirect to='/add-product' />} />
-          <Route exact path="/products/:id/edit" render={(props) => user ? <ProductEdit {...props} user={user} /> : <Redirect to='/' />} />
-          <Route exact path="/products/:id" render={(props) => <ProductDetail {...props} history={props.history} user={user} />} />
+          <Route exact path="/posts" render={() => <Posts user={user} />} />
+          <Route exact path="/add-post" render={() => user ? <PostCreate user={user} /> : <Redirect to='/add-post' />} />
+          <Route exact path="/posts/:id/edit" render={(props) => user ? <PostEdit {...props} user={user} /> : <Redirect to='/' />} />
+          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} user={user} />} />
         </Switch>
-        <Footer />
+   
       </div>
 )
     }

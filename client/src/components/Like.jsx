@@ -38,9 +38,7 @@ class Like extends Component {
 
     return (
       <div>
-        <p onClick={this.updateLikes}><img src={Heart} />{this.state.likes}</p>
-
-
+        <p onClick={this.updateLikes}><img style={{width: 25}} src={Heart} />{this.state.likes}</p>
       </div>
     );
   }

@@ -1,10 +1,10 @@
 const db = require('../db')
-const Product = require('../models/product')
+const Post = require('../models/Post')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  const products =
+  const Posts =
     [
       {
         "name": "How to get into the tech industry without a degree or experience",
@@ -55,8 +55,8 @@ const main = async () => {
 
 
 
-  await Product.insertMany(products)
-  console.log("Created products!")
+  await Post.insertMany(Posts)
+  console.log("Created Posts!")
 }
 const run = async () => {
   await main()

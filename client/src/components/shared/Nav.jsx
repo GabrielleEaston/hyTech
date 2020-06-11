@@ -1,7 +1,7 @@
 import React from "react";
-import "./Nav.css";
+//import "./Nav.css";
 import { NavLink } from "react-router-dom";
-import Logo from "../../Logo.png";
+
 
 
 const authenticatedOptions = (
@@ -29,9 +29,9 @@ const unauthenticatedOptions = (
 const Nav = ({ user }) => {
   return (
     <nav>
-      <div className="nav">
+      <div className="nav-container">
         <NavLink className="logo" to="/">
-          <img src={Logo} alt="Logo" />
+          <h1>HyTech</h1>
         </NavLink>
         <div className="links">
           {user && <div className="link welcome">Welcome, {user.username}</div>}

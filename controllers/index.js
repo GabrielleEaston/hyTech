@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
-const Product = require('../models/product')
+const Post = require('../models/post')
 const db = require('../db')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -70,60 +70,60 @@ const verifyUser = (req, res) => {
 
 const changePassword = async (req, res) => { }
 
-const getProducts = async (req, res) => {
+const getPosts = async (req, res) => {
     try {
-        const products = await Product.find()
-        res.json(products)
+        const posts = await Post.find()
+        res.json(posts)
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
 }
 
-const getProduct = async (req, res) => {
+const getPost = async (req, res) => {
     try {
         const { id } = req.params
-        const product = await Product.findById(id)
-        if (product) {
-            return res.json(product)
+        const post = await Post.findById(id)
+        if (post) {
+            return res.json(post)
         }
-        res.status(404).json({ message: 'Product not found!' })
+        res.status(404).json({ message: 'Post not found!' })
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
 }
 
-const createProduct = async (req, res) => {
+const createPost = async (req, res) => {
     try {
-        const product = await new Product(req.body)
-        await product.save()
-        res.status(201).json(product)
+        const post = await new Post(req.body)
+        await post.save()
+        res.status(201).json(post)
     } catch (error) {
         console.log(error)
         res.status(500).json({ error: error.message })
     }
 }
 
-const updateProduct = async (req, res) => {
+const updatePost = async (req, res) => {
     const { id } = req.params
-    await Product.findByIdAndUpdate(id, req.body, { new: true }, (error, product) => {
+    await Post.findByIdAndUpdate(id, req.body, { new: true }, (error, post) => {
         if (error) {
             return res.status(500).json({ error: error.message })
         }
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found!' })
+        if (!post) {
+            return res.status(404).json({ message: 'Post not found!' })
         }
-        res.status(200).json(product)
+        res.status(200).json(post)
     })
 }
 
-const deleteProduct = async (req, res) => {
+const deletePost = async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Product.findByIdAndDelete(id)
+        const deleted = await Post.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send("Product deleted")
+            return res.status(200).send("Post deleted")
         }
-        throw new Error("Product not found")
+        throw new Error("Post not found")
     } catch (error) {
         res.status(500).json({ error: error.message })
     }
@@ -134,9 +134,9 @@ module.exports = {
     signIn,
     verifyUser,
     changePassword,
-    createProduct,
-    getProducts,
-    getProduct,
-    updateProduct,
-    deleteProduct
+    createPost,
+    getPosts,
+    getPost,
+    updatePost,
+    deletePost
 }

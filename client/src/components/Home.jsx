@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+//import './Home.css'
 import Layout from './shared/Layout'
 
 const Home = (props) => {

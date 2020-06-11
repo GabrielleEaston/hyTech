@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import './ProductEdit.css'
+//import './ProductEdit.css'
 import { Redirect } from 'react-router-dom'
 import Layout from './shared/Layout'
-import { getProduct, updateProduct, deleteProduct } from '../services/product'
+import { getPost, updatePost, deletePost } from '../services/post'
 
-class ProductEdit extends Component {
+class PostEdit extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      product: {
+      post: {
         name: '',
         description: '',
         imgURL: '',
@@ -22,16 +22,16 @@ class ProductEdit extends Component {
 
   async componentDidMount() {
     let { id } = this.props.match.params
-    const product = await getProduct(id)
-    this.setState({ product })
+    const post = await getPost(id)
+    this.setState({ post })
   }
 
 
   handleChange = (event) => {
     const { name, value } = event.target
     this.setState({
-      product: {
-        ...this.state.product,
+      post: {
+        ...this.state.post,
         [name]: value
       }
     })
@@ -40,26 +40,26 @@ class ProductEdit extends Component {
   handleSubmit = async (event) => {
     event.preventDefault()
     let { id } = this.props.match.params
-    const updated = await updateProduct(id, this.state.product)
+    const updated = await updatePost(id, this.state.post)
     this.setState({ updated })
   }
   handleDelete = async (event) => {
     event.preventDefault()
     let { id } = this.props.match.params
-    const deleted = await deleteProduct(id, this.state.product)
+    const deleted = await deletePost(id, this.state.post)
     this.setState({ deleted })
   }
 
   render() {
 
-    const { product, updated, deleted } = this.state
+    const { post, updated, deleted } = this.state
 
     if (updated) {
-      return <Redirect to={`/products/${this.props.match.params.id}`} />
+      return <Redirect to={`/posts/${this.props.match.params.id}`} />
     }
 
     else if (deleted) {
-      return <Redirect to={`/products`} />
+      return <Redirect to={`/posts`} />
     }
 
 
@@ -67,12 +67,12 @@ class ProductEdit extends Component {
       <Layout user={this.props.user}>
         <div className="product-edit">
           <div className="image-container">
-            <img className="edit-product-image" src={product.imgURL} alt={product.name} />
+            <img className="edit-product-image" src={post.imgURL} alt={post.name} />
             <form onSubmit={this.handleSubmit}>
               <input
                 className="edit-input-image-link"
                 placeholder='Image Link'
-                value={product.imgURL}
+                value={post.imgURL}
                 name='imgURL'
                 required
                 onChange={this.handleChange}
@@ -83,7 +83,7 @@ class ProductEdit extends Component {
             <input
               className="input-author"
               placeholder='Author Name'
-              value={product.author}
+              value={post.author}
               name='author'
               required
               autoFocus
@@ -93,7 +93,7 @@ class ProductEdit extends Component {
             <input
               className="input-name"
               placeholder='Name'
-              value={product.name}
+              value={post.name}
               name='name'
               required
               autoFocus
@@ -104,7 +104,7 @@ class ProductEdit extends Component {
             <input
               className="input-subtitle"
               placeholder='Sub title'
-              value={product.sub_title}
+              value={post.sub_title}
               name='sub_title'
               required
               autoFocus
@@ -116,7 +116,7 @@ class ProductEdit extends Component {
               rows={10}
               cols={78}
               placeholder='Description'
-              value={product.description}
+              value={post.description}
               name='description'
               required
               onChange={this.handleChange}
@@ -132,4 +132,4 @@ class ProductEdit extends Component {
   }
 }
 
-export default ProductEdit
+export default PostEdit

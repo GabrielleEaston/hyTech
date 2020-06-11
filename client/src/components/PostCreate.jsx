@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import './ProductCreate.css'
 import Layout from './shared/Layout'
 import { Redirect } from 'react-router-dom'
-import { createProduct } from '../services/product'
+import { createPost } from '../services/post'
 
-class ProductCreate extends Component {
+class PostCreate extends Component {
     constructor() {
         super()
         this.state = {
-            product: {
+            post: {
                 name: '',
                 description: '',
                 imgURL: '',
@@ -22,8 +21,8 @@ class ProductCreate extends Component {
     handleChange = (event) => {
         const { name, value } = event.target
         this.setState({
-            product: {
-                ...this.state.product,
+            post: {
+                ...this.state.post,
                 [name]: value
             }
         })
@@ -31,15 +30,15 @@ class ProductCreate extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        const created = await createProduct(this.state.product)
+        const created = await createPost(this.state.post)
         this.setState({ created })
     }
 
     render() {
-        const { product, created } = this.state
+        const { post, created } = this.state
 
         if (created) {
-            return <Redirect to={`/products`} />
+            return <Redirect to={`/posts`} />
         }
         return (
           <Layout user={this.props.user}>
@@ -51,7 +50,7 @@ class ProductCreate extends Component {
               <input
                         className="input-author"
                         placeholder='Author'
-                        value={product.author}
+                        value={post.author}
                         name='author'
                         required
                         autoFocus
@@ -63,7 +62,7 @@ class ProductCreate extends Component {
               <input
                         className="input-name"
                         placeholder='Title'
-                        value={product.name}
+                        value={post.name}
                         name='name'
                         required
                         autoFocus
@@ -75,7 +74,7 @@ class ProductCreate extends Component {
                     <input
                         className="input-name"
                         placeholder='Sub title'
-                        value={product.sub_title}
+                        value={post.sub_title}
                         name='sub_title'
                         required
                         autoFocus
@@ -89,7 +88,7 @@ class ProductCreate extends Component {
                         className="textarea-description"
                         rows={10}
                         placeholder='Blog post'
-                        value={product.description}
+                        value={post.description}
                         name='description'
                         required
                         onChange={this.handleChange}
@@ -100,7 +99,7 @@ class ProductCreate extends Component {
                     <input
                         className="input-image-link"
                         placeholder='Image Link'
-                        value={product.imgURL}
+                        value={post.imgURL}
                         name='imgURL'
                         required
                         onChange={this.handleChange}
@@ -113,4 +112,4 @@ class ProductCreate extends Component {
     }
 }
 
-export default ProductCreate
+export default PostCreate
