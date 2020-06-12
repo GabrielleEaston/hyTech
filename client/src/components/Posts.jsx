@@ -4,6 +4,7 @@ import Search from './Search'
 import { AZ, ZA } from "./Sort"
 import Layout from './shared/Layout'
 import { getPosts } from '../services/post'
+import Hero from './Jumbotron';
 
 
 
@@ -65,8 +66,9 @@ class Posts extends Component {
     
 
     return (
-        
+        <>
       <Layout user={this.props.user}>
+        <Hero />
         <div className="rows">
           <div className="side">
             <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
@@ -85,7 +87,7 @@ class Posts extends Component {
             </div>
         </div>
       </Layout>
-
+</>
 
     )
   }

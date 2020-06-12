@@ -9,7 +9,8 @@ import { verifyUser } from './services/user'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import SignOut from './components/SignOut'
-import  dark  from "./images/half.png";
+import dark from "./images/half.png";
+import Nav from './components/shared/Nav'
 class App extends Component {
   constructor() {
     super()
@@ -48,7 +49,8 @@ class App extends Component {
     if (this.state.mode) {
     return (
       <div className="darkMode">
-        <img style={{width: 30}} src={dark} alt="half light dark circle" onClick={this.toggleDarkMode} className="lightSwitch"/>
+        <img style={{ width: 30 }} src={dark} alt="half light dark circle" onClick={this.toggleDarkMode} className="lightSwitch" />
+        <Nav user={user} />
         <Switch>
           <Route exact path="/posts" render={() => <Posts user={user} />} />
           <Route exact path="/" render={() => <Posts user={user} />} />
@@ -66,7 +68,8 @@ class App extends Component {
     } else {
       return (
         <div className="lightMode">
-          <img style={{width: 30}} src={dark} onClick={this.toggleDarkMode} className="lightSwitch" alt="half dark half white icon"  />
+          <img style={{ width: 30 }} src={dark} onClick={this.toggleDarkMode} className="lightSwitch" alt="half dark half white icon" />
+          <Nav user={user} />
         <Switch>
           <Route exact path="/posts" render={() => <Posts user={user} />} />
           <Route exact path="/" render={() => <Posts user={user} />} />
