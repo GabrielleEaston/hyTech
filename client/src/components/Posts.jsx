@@ -5,6 +5,7 @@ import { AZ, ZA } from "./Sort"
 import Layout from './shared/Layout'
 import { getPosts } from '../services/post'
 import Hero from './Jumbotron';
+import {Form} from "react-bootstrap"
 
 
 
@@ -72,14 +73,14 @@ class Posts extends Component {
         <div className="rows">
           <div className="side">
             <Search onSubmit={this.handleSubmit} value={this.state.filterValue} onChange={this.handleSearchChange} />
-            <form className="sort-container" onSubmit={this.handleSubmit}>
+            <Form className="sort-container text-center" onSubmit={this.handleSubmit}>
               <label className="sortBy" htmlFor="sort">SORT BY:</label>
 
               <select className="sort" value={this.state.selectValue} onChange={this.handleSortChange}>
                 <option className="option" value="name-ascending" >&nbsp; Alphabetically, A-Z &nbsp;</option>
                 <option value="name-descending">&nbsp; Alphabetically, Z-A &nbsp;</option>
               </select>
-            </form>
+            </Form>
           </div>
 
             <div className="posts">

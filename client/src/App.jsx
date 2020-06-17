@@ -9,29 +9,19 @@ import { verifyUser } from './services/user'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import SignOut from './components/SignOut'
-import dark from "./images/half.png";
+
 import Nav from './components/shared/Nav'
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      user: null,
-      mode: false
+      user: null
+   
     }
-    this.toggleDarkMode = this.toggleDarkMode.bind(this);
+   
   }
 
-  toggleDarkMode() {
-    this.setState((state) => {
-      if (state.mode === true) {
 
-        return {mode: false}
-      } else {
-     
-        return { mode: true };
-      }
-    });
-  }
   async componentDidMount() {
     const user = await verifyUser()
     if (user) {
@@ -46,10 +36,10 @@ class App extends Component {
   render() {
     const { setUser, clearUser } = this
     const { user } = this.state
-    if (this.state.mode) {
+    
     return (
-      <div className="darkMode">
-        <img style={{ width: 30 }} src={dark} alt="half light dark circle" onClick={this.toggleDarkMode} className="lightSwitch" />
+      <div className="App">
+       
         <Nav user={user} />
         <Switch>
           <Route exact path="/posts" render={() => <Posts user={user} />} />
@@ -65,27 +55,8 @@ class App extends Component {
        
       </div>
     )
-    } else {
-      return (
-        <div className="lightMode">
-          <img style={{ width: 30 }} src={dark} onClick={this.toggleDarkMode} className="lightSwitch" alt="half dark half white icon" />
-          <Nav user={user} />
-        <Switch>
-          <Route exact path="/posts" render={() => <Posts user={user} />} />
-          <Route exact path="/" render={() => <Posts user={user} />} />
-          <Route exact path="/sign-up" render={props => <SignUp setUser={setUser} history={props.history} />} />
-          <Route exact path="/sign-in" render={props => <SignIn setUser={setUser} history={props.history} />} />
-          <Route exact path="/sign-out" render={props => <SignOut user={user} clearUser={clearUser} history={props.history} />} />
-          <Route exact path="/posts" render={() => <Posts user={user} />} />
-          <Route exact path="/add-post" render={() => user ? <PostCreate user={user} /> : <Redirect to='/add-post' />} />
-          <Route exact path="/posts/:id/edit" render={(props) => user ? <PostEdit {...props} user={user} /> : <Redirect to='/' />} />
-          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} user={user} />} />
-        </Switch>
-   
-      </div>
-)
-    }
+    } 
   }
-}
+
 
 export default App

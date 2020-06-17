@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-//import './ProductEdit.css'
 import { Redirect } from 'react-router-dom'
 import Layout from './shared/Layout'
-import { getPost, updatePost, deletePost } from '../services/post'
+import { getPost, updatePost, deletePost } from '../services/post';
+import { Form, Container, Button } from "react-bootstrap";
 
 class PostEdit extends Component {
   constructor(props) {
@@ -65,11 +65,12 @@ class PostEdit extends Component {
 
     return (
       <Layout user={this.props.user}>
-        <div className="product-edit">
+        <div className="product-edit container">
           <div className="image-container">
             <img className="edit-product-image" src={post.imgURL} alt={post.name} />
-            <form onSubmit={this.handleSubmit}>
-              <input
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group controlId="formImageURL">
+              <Form.Control
                 className="edit-input-image-link"
                 placeholder='Image Link'
                 value={post.imgURL}
@@ -77,10 +78,13 @@ class PostEdit extends Component {
                 required
                 onChange={this.handleChange}
               />
-            </form>
+              
+              </Form.Group>
+            </Form>
           </div>
-          <form className="edit-form" onSubmit={this.handleSubmit}>
-            <input
+          <Form className="edit-form" onSubmit={this.handleSubmit}>
+            <Form.Group controlId="formAuthor"> 
+            <Form.Control
               className="input-author"
               placeholder='Author Name'
               value={post.author}
@@ -89,8 +93,9 @@ class PostEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
-
-            <input
+          </Form.Group>
+            <Form.Group controlId="formTitle">
+            <Form.Control
               className="input-name"
               placeholder='Name'
               value={post.name}
@@ -99,9 +104,11 @@ class PostEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
-            <br />
-
-            <input
+            
+            </Form.Group>
+           
+            <Form.Group controlId="formSubTitle">
+            <Form.Control
               className="input-subtitle"
               placeholder='Sub title'
               value={post.sub_title}
@@ -110,8 +117,9 @@ class PostEdit extends Component {
               autoFocus
               onChange={this.handleChange}
             />
-            <br />
-            <textarea
+            </Form.Group>
+            <Form.Group controlId="textarea">
+            <Form.Control as="textarea" rows="6"
               className="textarea-description"
               rows={10}
               cols={78}
@@ -121,11 +129,12 @@ class PostEdit extends Component {
               required
               onChange={this.handleChange}
             />
-            <br />
+            </Form.Group>
+         
 
-            <button type='submit' className="save-button">Save</button>
-            <button className="delete-button" onClick={(this.handleDelete)}>Delete</button>
-          </form>
+            <Button variant="outline-info" type='submit' className="save-button">Save</Button>
+            <Button variant="outline-danger" className="delete-button" onClick={(this.handleDelete)}>Delete</Button>
+          </Form>
         </div>
       </Layout>
     )

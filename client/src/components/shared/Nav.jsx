@@ -1,7 +1,7 @@
 import React from "react";
-//import "./Nav.css";
 import { NavLink } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
+import './Nav.css';
+
 
 
 
@@ -33,14 +33,12 @@ const unauthenticatedOptions = (
 
 const Nav = ({ user }) => {
   return (
-    
-
-      <nav>
+      <nav className="nav-bar" >
         <NavLink className="logo" to="/">
           <h1>HyTech</h1>
         </NavLink>
         <div className="links">
-          {user && <div className="link welcome"><p style={{textTransform: "capitalize"}}>Welcome, {user.username}</p></div>}
+          {user && <div className="link-welcome"><p style={{textTransform: "capitalize"}}>Welcome, {user.username}</p></div>}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
         </nav>

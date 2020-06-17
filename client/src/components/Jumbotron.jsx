@@ -2,13 +2,14 @@ import React from 'react'
 import { Jumbotron } from "react-bootstrap";
 export default function Hero() {
   return (
-    <Jumbotron >
-    <h1>Welcome to space where you can share your opinions freely</h1>
+    <Jumbotron className="text-center" >
+    <h1>Share your opinions freely</h1>
     <p>
-    Write about your experiences learning new technologies, tech bootcamps, youtube tutorials
+    Write about your experiences: learning new technologies, tech bootcamps, youtube tutorials
+    and anything related to your tech journey.
     </p>
     <p>
-    Be Kind Be Honest Share
+    <span>Be Kind</span> <span>Be Honest</span> <span>Share</span>
     </p>
   </Jumbotron>
   )

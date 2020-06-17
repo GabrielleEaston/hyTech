@@ -36,9 +36,13 @@ class PostDetail extends Component {
             <div className="author">{post.author}</div>
           <img className="product-detail-image" src={post.imgURL} alt={post.name} />
             <div className="description">{post.description}</div>
+            {this.props.user && this.props.user.id === post.user_id && (
+
             <div className="button-container">
               <Button variant="light"><Link className="edit-link" to={`/posts/${post._id}/edit`}>Edit</Link></Button>
             </div>
+
+            )}
           </div>
         </div>
       </Layout>
@@ -47,3 +51,4 @@ class PostDetail extends Component {
 }
 
 export default PostDetail
+

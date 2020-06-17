@@ -1,9 +1,10 @@
 import React from 'react'
 //import './Search.css'
+import { Form } from "react-bootstrap";
 
 const Search = (props) => {
     return (
-        <form className="search-form" onSubmit={(e) => props.onSubmit(e)}>
+        <Form className="search-form text-center" onSubmit={(e) => props.onSubmit(e)}>
             <input
                 className="search-input"
                 value={props.value}
@@ -13,7 +14,7 @@ const Search = (props) => {
                 type="text"
                 autoFocus
             />
-        </form>
+        </Form>
     )
 }
 
