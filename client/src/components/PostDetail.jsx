@@ -39,16 +39,15 @@ class PostDetail extends Component {
               alt={post.name}
             />
             <div className="description">{post.description}</div>
-            {(this.props.user && this.props.user.id === post.user_id) ||
-              (this.props.user._id === post.user_id && (
-                <div className="button-container">
-                  <Button variant="light">
-                    <Link className="edit-link" to={`/posts/${post._id}/edit`}>
-                      Edit
-                    </Link>
-                  </Button>
-                </div>
-              ))}
+            {this.props.user && this.props.user._id === post.user_id && (
+              <div className="button-container">
+                <Button variant="light">
+                  <Link className="edit-link" to={`/posts/${post._id}/edit`}>
+                    Edit
+                  </Link>
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </Layout>
