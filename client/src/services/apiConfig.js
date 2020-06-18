@@ -6,7 +6,7 @@ const getToken = () => {
 };
 let apiUrl;
 const apiUrls = {
-  production: "https://hytech-app.herokuapp.com/api",
+  production: "https://hitech-blog-app.herokuapp.com/api",
   development: "http://localhost:3000/api",
 };
 if (window.location.hostname === "localhost") {
